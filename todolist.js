@@ -13,8 +13,11 @@ if (savedTasks) {
         }
         checkbox.addEventListener('click', function() {
             if (this.checked) {
-                this.parentNode.remove();
+                setTimeOut(()=>{
+                    this.parentNode.remove();
                 localStorage.setItem('tasks', taskList.innerHTML);
+                },1000)
+                
             }
         });
     });
