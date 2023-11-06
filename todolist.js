@@ -13,9 +13,9 @@ if (savedTasks) {
         }
         checkbox.addEventListener('click', function() {
             if (this.checked) {
-                setTimeOut(()=>{
+                setTimeout(()=>{
                     this.parentNode.remove();
-                localStorage.setItem('tasks', taskList.innerHTML);
+                    localStorage.setItem('tasks', taskList.innerHTML);
                 },1000)
                 
             }
